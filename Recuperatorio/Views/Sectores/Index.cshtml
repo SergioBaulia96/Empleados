@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Sectores";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Lista de Sectores</h1>
+</div>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sectorModal" onclick="NuevoSector()">
+    Nuevo Sector
+</button>
+<!-- Modal -->
+<div class="modal fade" id="sectorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModal">Nuevo Sector</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="hidden" id="SectorID" value="0">
+
+                    <label for="NombreSector" class="form-label">Sector</label>
+                    <input type="text" id="NombreSector" class="form-control">
+
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="LimpiarModal()">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="GuardarSector()">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<table class="table table-light table-hover">
+        <thead>
+          <tr>
+            <th>Sector</th>
+            <th style="width: 70px">Editar</th>
+            <th style="width: 70px">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="tbody-sectores">
+        </tbody>
+      </table>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+@section Scripts{
+<script src="~/js/sectores.js"></script>
+}
