@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+/Recuperatorio/bin/
+/Recuperatorio/obj/
+/.vs
+/Recuperatorio/.vs
